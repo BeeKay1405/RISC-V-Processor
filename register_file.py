@@ -11,6 +11,9 @@ class RegisterFile:
     def read(self, rs1, rs2):
         return self.regs[rs1], self.regs[rs2]
 
+    def read1(self, rs1):
+        return self.regs[rs1]
+
     # Integer register write
     def write(self, rd, value):
         if rd != 0:
@@ -19,6 +22,9 @@ class RegisterFile:
     # Floating-point register read
     def fread(self, frs1, frs2):
         return self.fregs[frs1], self.fregs[frs2]
+
+    def fread1(self, frs1):
+        return self.fregs[frs1]
 
     # Floating-point register write
     def fwrite(self, frd, value):
